@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.png">
+    <title>CineLore</title>        
+</head>
+
+
+
+
+<body>
+    <section class="container">
+        <header><h1>CineLore</h1></header> 
+        <aside>
+            
+                <button class="btn">Películas</button>
+                <button class="btn">Series</button>
+                <button class="btn">Cosas</>
+                <button class="btn">Cosas+</>
+            
+        </aside>
+        <main>
+            <ul class="scroll">
+                {% for pelicula in peliculas %}
+                <li class="content">
+                <img src="https://image.tmdb.org/t/p/w500{{ pelicula.imagen }}" alt="{{ pelicula.titulo }}">
+                <!---- <p><strong>Descripción:</strong> {{ pelicula.descripcion }}</p> -->
+                
+                <div class="progress-circle" data-value="{{ pelicula.calificacion }}">
+                    <svg class="circle-svg">
+                        <circle class="circle-background" cx="25" cy="25" r="23"></circle> <!-- Radio más pequeño -->
+                        <circle class="circle-progress" cx="25" cy="25" r="23"></circle>  <!-- Radio más pequeño -->
+                    </svg>
+                    <div class="progress-text"></div>
+                </div>
+                
+
+                <h3>{{ pelicula.titulo }}</h3>
+                <p class="date">{{ pelicula.fecha_estreno }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+            
+        </main>
+        <footer><h3>Cargar mas</h3></footer>
+    </section>
+    <script src="/static/circle.js"></script>
+</body>
+
+</html>
+
