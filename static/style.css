@@ -37,17 +37,11 @@ h2 {
     box-shadow: 0 0 3rem -1rem rgba(40, 40, 40, 0.699);
 }
 
-img::after {
-    content: "";
-    width:80%;
-    height:80%;
-    inset:0;
-    position:absolute;
-    background:inherit;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.50)) blur(50px) saturate(260%);
-    z-index:-1;
-    
-    animation: oscillate 3s cubic-bezier(.17, .67, .45, 1.32) infinite alternate;
+img:after {
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;   
+    z-index: 1;
 }
 
 
