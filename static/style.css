@@ -38,13 +38,6 @@ h2 {
 }
 
 img {
-    width: 100%;
-    height: auto;
-    border-radius: .5rem;   
-    z-index: 1;
-}
-
-.smart_shadow::after{
     content: "";
     width:80%;
     height:80%;
@@ -55,9 +48,9 @@ img {
     z-index:-1;
     
     animation: oscillate 3s cubic-bezier(.17, .67, .45, 1.32) infinite alternate;
-  
-
 }
+
+
 
 li:hover {
     transform: scale(1.05);
