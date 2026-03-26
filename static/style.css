@@ -44,6 +44,21 @@ img {
     z-index: 1;
 }
 
+.smart_shadow::after{
+    content: "";
+    width:80%;
+    height:80%;
+    inset:0;
+    position:absolute;
+    background:inherit;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.50)) blur(50px) saturate(260%);
+    z-index:-1;
+    
+    animation: oscillate 3s cubic-bezier(.17, .67, .45, 1.32) infinite alternate;
+  
+
+}
+
 li:hover {
     transform: scale(1.05);
 }
