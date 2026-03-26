@@ -37,7 +37,7 @@ h2 {
     box-shadow: 0 0 3rem -1rem rgba(40, 40, 40, 0.699);
 }
 
-img {
+img::after {
     content: "";
     width:80%;
     height:80%;
